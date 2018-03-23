@@ -13,5 +13,5 @@ if (prime(a)==True):
     print("bil prima Loh")
 else:
     print("ini bukan prima loh")
-
+    # halo2222
     #iki lho tak edit
