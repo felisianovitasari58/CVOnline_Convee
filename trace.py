@@ -20,7 +20,7 @@ x=0
 y=0
 i=0
 j=1
-while  (x!=6) and (y!=4):
+while  (x<=6) :
 # for i in range(len(map)):
 #     for j in range(1,len(map)):
     if(map[i][j]==True):
@@ -29,10 +29,10 @@ while  (x!=6) and (y!=4):
         temp1.append(j)
         y=j
         j+=1
-        if(map[i][j]==False):
-            x=i
-            y=j
-            j-=1
+        # if(map[i][j]==False):
+        #     x=i
+        #     y=j
+        #     j-=1
     elif(map[i][j]==False):
         j-=1
         i+=1
@@ -43,3 +43,5 @@ print(temp)
 print(temp1)
 # coba edit
 ######
+
+
