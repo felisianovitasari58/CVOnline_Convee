@@ -6,14 +6,19 @@ random.shuffle(kartu)
 print("Kartu hasil = ",kartu)
 print()
 arrtemp=[]
-for i in range(0,52,4):
-    for j in range(i,i+4):
-        arrtemp.append(kartu[j])
-    for k in range (52):
-        if(arrtemp[1][0]!=kartu[k][0]):
-            arrtemp.append(kartu[k])
+for i in range(52):
+    arrtemp.append(kartu[i])
+    for j in range (i,53-i):
+        if(arrtemp[0][0]==kartu[j+1][0]):
+            arrtemp.append(kartu[j+1])
             print(arrtemp)
-            arrtemp.remove(kartu[k])
-            increment+=1
+            if (len(arrtemp)==4):
+                break
+    # for k in range (52):
+    #     if(arrtemp[1][0]!=kartu[k][0]):
+    #         arrtemp.append(kartu[k])
+    #         print(arrtemp)
+    #         arrtemp.remove(kartu[k])
+    #         increment+=1
     arrtemp.clear()
 print("Kombinasi: ", increment)
