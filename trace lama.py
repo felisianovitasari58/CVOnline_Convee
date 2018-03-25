@@ -20,7 +20,7 @@ x=0
 y=0
 i=0
 j=1
-while  (x<=6) :
+while  (x<=7) :
 # for i in range(len(map)):
 #     for j in range(1,len(map)):
     if(map[i][j]==True):

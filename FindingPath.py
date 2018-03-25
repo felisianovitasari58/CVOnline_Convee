@@ -13,31 +13,30 @@ def finished(x,y):
         return False
 
 while  (finished(a,b)==False) :
-    if(map[i][j+1]==True):
+    if(map[i+1][j]==True):
         temp.append(i)
         a=i
         temp1.append(j)
         b=j
-        j+=1
-    elif(map[i][j+1]==False):
-        if(map[i+1][j]==True):
+        i+=1
+    elif(map[i+1][j]==False):
+        if(map[i][j+1]==True):
             temp.append(i)
             a = i
             temp1.append(j)
             b = j
-            i += 1
-        # elif(map[i+1][j]==False):
-        #     a=i
-        #     b=j
-        #     temp.append(i)
-        #     a = i
-        #     temp1.append(j)
-        #     b = j
-        #     j-=1
+            j += 1
+        elif(map[i][j+1]==False):
+            a=i
+            b=j
+            temp.append(i)
+            a = i
+            temp1.append(j)
+            b = j
+            j-=1
 
 print(temp)
 print(temp1)
 # coba edit
 ######
-
 
