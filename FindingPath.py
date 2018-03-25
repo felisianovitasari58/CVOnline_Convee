@@ -6,8 +6,10 @@ a=0
 b=0
 i=0
 j=1
+xFinish=6
+yFinish=4
 def finished(x,y):
-    if(x==6 and y==4):
+    if(x==xFinish and y==yFinish):
         return True
     else:
         return False
@@ -35,8 +37,13 @@ while  (finished(a,b)==False) :
             b = j
             j-=1
 
-print(temp)
-print(temp1)
+print("Path untuk start dari 0,1 ke ",xFinish,",",yFinish, "ialah : ")
+print("[",end="")
+for m in range(len(temp)):
+    print("(",temp[m],",",temp1[m],")",end="")
+print("]")
+# print(temp)
+# print(temp1)
 # coba edit
 ######
 
