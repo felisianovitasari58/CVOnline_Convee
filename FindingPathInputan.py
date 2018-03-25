@@ -4,10 +4,12 @@ temp=[]
 temp1=[]
 a=0
 b=0
-i=0
-j=1
-xFinish=6
-yFinish=4
+xStart=int(input("Titik start X= "))
+yStart=int(input("Titik start Y= "))
+xFinish=int(input("Titik stop X= "))
+yFinish=int(input("Titik stop Y= "))
+i=xStart
+j=yStart
 def finished(x,y):
     if(x==xFinish and y==yFinish):
         return True
@@ -37,7 +39,7 @@ while  (finished(a,b)==False) :
             b = j
             j-=1
 
-print("Path untuk start dari 0,1 ke ",xFinish,",",yFinish, "ialah : ")
+print("Path untuk start dari ",xStart,",",yStart,"ke ",xFinish,",",yFinish, "ialah : ")
 print("[",end="")
 for m in range(len(temp)):
     print("(",temp[m],",",temp1[m],")",end="")
