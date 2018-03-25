@@ -1,43 +1,39 @@
 map=[True,True,True,False,True,True,True,True],[True,True,False,False,False,True,True,False],[True,True,True,True,True,True,True,False],[True,True,True,True,True,True,True,False],[False,False,False,True,True,True,True,False],[True,True,True,False,False,True,True,False],[True,True,True,True,True,True,False,True],[True,True,True,True,False,False,True,True]
-# start=[0][1]
-# stop=[6][4]
-
-# urut=False
-# while not urut:
-#     urut= True
-#     for i in range(len(nilai)-1):
-#         if(nilai[i]>nilai[i+1]):
-#             min=nilai[i+1]
-#             nilai[i+1]=nilai[i]
-#             nilai[i]=min
-#             urut=False
-#
-#     print(nilai)
 
 temp=[]
 temp1=[]
-x=0
-y=0
+a=0
+b=0
 i=0
 j=1
-while  (x<=6) :
-# for i in range(len(map)):
-#     for j in range(1,len(map)):
-    if(map[i][j]==True):
+def finished(x,y):
+    if(x==6 and y==4):
+        return True
+    else:
+        return False
+
+while  (finished(a,b)==False) :
+    if(map[i][j+1]==True):
         temp.append(i)
-        x=i
+        a=i
         temp1.append(j)
-        y=j
+        b=j
         j+=1
-        # if(map[i][j]==False):
-        #     x=i
-        #     y=j
+    elif(map[i][j+1]==False):
+        if(map[i+1][j]==True):
+            temp.append(i)
+            a = i
+            temp1.append(j)
+            b = j
+            i += 1
+        # elif(map[i+1][j]==False):
+        #     a=i
+        #     b=j
+        #     temp.append(i)
+        #     a = i
+        #     temp1.append(j)
+        #     b = j
         #     j-=1
-    elif(map[i][j]==False):
-        j-=1
-        i+=1
-        x=i
-        y=j
 
 print(temp)
 print(temp1)
